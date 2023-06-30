@@ -16,11 +16,10 @@ import java.util.ArrayList;
 //step 1:  create a class as a child of RecyclerView.Adapter.
 public class MyNewsListAdapter extends RecyclerView.Adapter<MyHolder> {
 
-    ArrayList<String> list=new ArrayList<>();
+    ArrayList<News> list=new ArrayList<>();
     NewsItemClicked listener=null;
-    MyNewsListAdapter(ArrayList<String> list,NewsItemClicked listener)
+    MyNewsListAdapter(NewsItemClicked listener)
     {
-     this.list=list;
      this.listener=listener;
     }
     @NonNull
@@ -43,13 +42,22 @@ public class MyNewsListAdapter extends RecyclerView.Adapter<MyHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyHolder holder, int position)
     {
-        holder.textView.setText(list.get(position));
+        holder.textView.setText(list.get(holder.getAdapterPosition()).getTitle());
     }
 
     @Override
     public int getItemCount() {
         return list.size();
     }
+    public void updateData(ArrayList<News> news)
+    {
+        list.clear();
+        list.addAll(news);
+
+        notifyDataSetChanged();
+
+    }
+
 }
 
 
@@ -67,5 +75,5 @@ class MyHolder extends RecyclerView.ViewHolder
 
 interface NewsItemClicked
 {
-    void onClicked(String item);
+    void onClicked(News item);
 }
