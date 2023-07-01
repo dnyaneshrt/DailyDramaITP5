@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "835378865865",
+    "project_id": "dailydrama-5b455",
+    "storage_bucket": "dailydrama-5b455.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835378865865:android:0c2e3598d0af9390dbcf18",
+        "android_client_info": {
+          "package_name": "com.itp.dailydrama"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835378865865-7064gam06io292vdt536lk7jird9onpn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAotWaODVkHgn1XkX_C04aTU6nZWfyIa58"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835378865865-7064gam06io292vdt536lk7jird9onpn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -40,6 +40,7 @@
         android:drawableLeft="@drawable/baseline_lock_24"
         android:drawablePadding="10dp"
         android:hint="Password"
+        android:inputType="numberPassword"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         android:textColorHighlight="@color/black"/>
@@ -88,7 +89,14 @@
         android:layout_marginBottom="10dp"
         android:layout_marginTop="0dp"
         android:background="@drawable/shapelogin"/>
-
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="don't have an account? register here"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="5dp"
+        android:textStyle="bold"/>
     <Button
         android:id="@+id/btn_register"
         android:layout_width="match_parent"
