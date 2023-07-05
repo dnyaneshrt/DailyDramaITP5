@@ -47,9 +47,10 @@ public class MainActivity extends AppCompatActivity {
          recyclerView=findViewById(R.id.recyclerView);
          floatingActionButton=findViewById(R.id.floatingActionButton);
 
+         LinearLayoutManager layoutManager=new LinearLayoutManager(this);
 
          //set layout Manager
-         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+         recyclerView.setLayoutManager(layoutManager);
 
     /*     ArrayList<String> dummyDataList=getDummyData();*/
 
@@ -83,19 +84,17 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_SEND);
                 intent.setType("text/plain");
-                intent.putExtra(Intent.EXTRA_TEXT,"hey i have got this news from DailyDrama Entertainment android app.. ");
+                intent.putExtra(Intent.EXTRA_TEXT,"hey i have got this news from DailyDramaITP Entertainment android app.. "+articles.get(layoutManager.findFirstVisibleItemPosition()).getUrl());
                 startActivity(Intent.createChooser(intent, "share this news using..."));
 
 //    Snackbar.make(view, "coming soon...", Snackbar.LENGTH_LONG)
 //    .setAction("Action", null).show()
             }
         });
-
-
     }
 
     private void fetchRealtimeNews() throws IllegalAccessException, InstantiationException {
-
+        Toast.makeText(this, "make sure you have an internet connection", Toast.LENGTH_SHORT).show();
 
         String name = getIntent().getStringExtra("category");
         Call<News> news=NewService.class.newInstance().newsInstance.getHeadlines("in", pageNum, name, "popularity");
