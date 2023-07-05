@@ -1,12 +1,15 @@
 package com.itp.dailydrama;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridLayout;
+import android.widget.Toast;
 
 public class Category_Activity extends AppCompatActivity {
     GridLayout mainGridayout;
@@ -16,6 +19,44 @@ public class Category_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_category);
         mainGridayout=findViewById(R.id.mainGridayout);
         setSingleEvent(mainGridayout);
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        AlertDialog.Builder alertDialog= new AlertDialog.Builder(this);
+        alertDialog.setTitle("Exit App!");
+        alertDialog.setMessage("Do you really want to exit app?");
+        alertDialog.setIcon(R.drawable.baseline_exit_to_app_24);
+        alertDialog.setCancelable(false);
+        alertDialog.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                if (i == DialogInterface.BUTTON_POSITIVE) {
+
+                    finish();
+
+                }
+            }
+        });
+        alertDialog.setNegativeButton("no", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                if (i == DialogInterface.BUTTON_NEUTRAL) {
+                    dialogInterface.dismiss();
+                }
+            }
+        });
+        alertDialog.setNeutralButton("cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                if (i == DialogInterface.BUTTON_NEGATIVE) {
+                    dialogInterface.dismiss();
+                }
+
+            }
+        });
+        alertDialog.show();
     }
 
     private void setSingleEvent(GridLayout mainGridayout) {
@@ -33,37 +74,37 @@ public class Category_Activity extends AppCompatActivity {
                             if (finalI == 0) {
 
                                 Intent intent = new Intent(Category_Activity.this, MainActivity.class);
-//                                intent.putExtra("category", "entertainment");
+                                intent.putExtra("category", "entertainment");
                                 startActivity(intent);
 
                             } else if (finalI == 1) {
 
                                 Intent intent = new Intent(Category_Activity.this, MainActivity.class);
-//                                intent.putExtra("category", "health");
+                                intent.putExtra("category", "health");
                                 startActivity(intent);
 
                             } else if (finalI == 2) {
 
                                 Intent intent = new Intent(Category_Activity.this, MainActivity.class);
-//                                intent.putExtra("category", "business");
+                                intent.putExtra("category", "business");
                                 startActivity(intent);
 
                             } else if (finalI == 3) {
 
                                 Intent intent = new Intent(Category_Activity.this, MainActivity.class);
-//                                intent.putExtra("category", "politics");
+                                intent.putExtra("category", "politics");
                                 startActivity(intent);
 
                             } else if (finalI == 4) {
 
                                 Intent intent = new Intent(Category_Activity.this, MainActivity.class);
-//                                intent.putExtra("category", "science");
+                                intent.putExtra("category", "science");
                                 startActivity(intent);
 
                             } else if (finalI == 5) {
 
                                 Intent intent = new Intent(Category_Activity.this, MainActivity.class);
-//                                intent.putExtra("category", "sports");
+                                intent.putExtra("category", "sports");
                                 startActivity(intent);
 
                             } else if (finalI == 6) {
@@ -77,6 +118,7 @@ public class Category_Activity extends AppCompatActivity {
 //                            Intent intent = new Intent(Category_Activity.this, SettingsActivity.class);
 //                            intent.putExtra("category","Startups")
 //                            startActivity(intent)
+                                Toast.makeText(Category_Activity.this, "work in progress..", Toast.LENGTH_SHORT).show();
 
                             } else if (finalI == 8) {
 
@@ -84,8 +126,11 @@ public class Category_Activity extends AppCompatActivity {
 //                            Intent intent = new Intent(Category_Activity.this, SettingsActivity.class);
 //                            intent.putExtra("category","Funny")
 //                            startActivity(intent)
+                                Toast.makeText(Category_Activity.this, "work in progress..", Toast.LENGTH_SHORT).show();
+
 
                             } else if (finalI == 9) {
+                                Toast.makeText(Category_Activity.this, "work in progress..", Toast.LENGTH_SHORT).show();
 
 
 //                            Intent intent = new Intent(Category_Activity.this, SettingsActivity.class);
@@ -93,6 +138,7 @@ public class Category_Activity extends AppCompatActivity {
 //                            startActivity(intent)
 
                             } else if (finalI == 10) {
+                                Toast.makeText(Category_Activity.this, "work in progress..", Toast.LENGTH_SHORT).show();
 
 
 //                            Intent intent = new Intent(Category_Activity.this, SettingsActivity.class);
@@ -100,6 +146,7 @@ public class Category_Activity extends AppCompatActivity {
 //                            startActivity(intent)
 
                             } else if (finalI == 11) {
+                                Toast.makeText(Category_Activity.this, "work in progress..", Toast.LENGTH_SHORT).show();
 
 
 //                            Intent intent = new Intent(Category_Activity.this, SettingsActivity.class);
@@ -108,25 +155,29 @@ public class Category_Activity extends AppCompatActivity {
 
                             } else if (finalI == 12) {
 
+                                Toast.makeText(Category_Activity.this, "work in progress..", Toast.LENGTH_SHORT).show();
 
 //                            Intent intent = new Intent(Category_Activity.this, SettingsActivity.class);
 //                            intent.putExtra("category","Fashion")
 //                            startActivity(intent)
 
                             } else if (finalI == 13) {
+                                Toast.makeText(Category_Activity.this, "work in progress..", Toast.LENGTH_SHORT).show();
 
-//
+// Toast.makeText(Category_Activity.this, "work in progress..", Toast.LENGTH_SHORT).show();
 //                            Intent intent = new Intent(Category_Activity.this, SettingsActivity.class);
 //                            intent.putExtra("category","Education")
 //                            startActivity(intent)
 
                             } else if (finalI == 14) {
+                                Toast.makeText(Category_Activity.this, "work in progress..", Toast.LENGTH_SHORT).show();
 
 //                            Intent intent = new Intent(Category_Activity.this, SettingsActivity.class);
 //                            intent.putExtra("category","India")
 //                            startActivity(intent)
 
                             } else if (finalI == 15) {
+                                Toast.makeText(Category_Activity.this, "work in progress..", Toast.LENGTH_SHORT).show();
 
 
 //                            Intent intent = new Intent(Category_Activity.this, SettingsActivity.class);
@@ -134,6 +185,7 @@ public class Category_Activity extends AppCompatActivity {
 //                            startActivity(intent)
 
                             } else if (finalI == 16) {
+                                Toast.makeText(Category_Activity.this, "work in progress..", Toast.LENGTH_SHORT).show();
 
 //
 //                            Intent intent = new Intent(Category_Activity.this, SettingsActivity.class);
@@ -141,6 +193,7 @@ public class Category_Activity extends AppCompatActivity {
 //                            startActivity(intent)
 
                             } else if (finalI == 17) {
+                                Toast.makeText(Category_Activity.this, "work in progress..", Toast.LENGTH_SHORT).show();
 
 //                            Intent intent = new Intent(Category_Activity.this, SettingsActivity.class);
 //                            intent.putExtra("category","Miscellaneous")

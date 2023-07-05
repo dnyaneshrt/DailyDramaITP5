@@ -1,49 +1,24 @@
 package com.itp.dailydrama;
 
+import java.util.List;
+
 public class News {
-    private String title;
-    private String description;
-    private String url;
-    private String urlToImage;
+   private int totalResults;
+   private List<Article> articles;
 
-    public News(String title, String description, String url, String urlToImage) {
-        this.title = title;
-        this.description = description;
-        this.url = url;
-        this.urlToImage = urlToImage;
+    public int getTotalResults() {
+        return totalResults;
     }
 
-    public String getTitle() {
-        return title;
+    public void setTotalResults(int totalResults) {
+        this.totalResults = totalResults;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public List<Article> getArticles() {
+        return articles;
     }
 
-    public String getDescription() {
-        return description;
+    public void setArticles(List<Article> articles) {
+        this.articles = articles;
     }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public String getUrlToImage() {
-        return urlToImage;
-    }
-
-    public void setUrlToImage(String urlToImage) {
-        this.urlToImage = urlToImage;
-    }
-
-
 }
